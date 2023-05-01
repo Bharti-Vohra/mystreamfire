@@ -4,9 +4,9 @@ from firebase_admin import db
 import streamlit as st
 
 # Initialize
-cred = credentials.Certificate("integratekey.json")
-firebase_admin.initialize_app(cred,{'databaseURL':'https://database-2d9f4-default-rtdb.firebaseio.com/'})
-ref = db.reference('/employees')  
+cred = credentials.Certificate("mystreamfire.json")
+firebase_admin.initialize_app(cred,{'databaseURL':'https://mystreamfire-default-rtdb.firebaseio.com/', 'name': 'my-streamapp'})
+ref = db.reference('/employees')
 st.header("Add Employee")
 emp_id = st.text_input("Employee_Id")
 name = st.text_input("Name")
